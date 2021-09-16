@@ -8,5 +8,151 @@
 }
 
 body {
-    background: linear-gradient(to right, #8e94f2, #e0c3fc);
+    background: linear-gradient(to right, #8e94f2, #e0c3fc); /* Efeito gradiente */
+    width: 100%;
+}
+
+header {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 26px;
+    color: #000;
+    font-weight: 1000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container {
+    background: #fff;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 25px;
+    margin: 150px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+}
+
+.data-dia {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+}
+
+.mes-ano {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.mes-ano span {
+    color: #000;
+    font-size: 18px;
+    flex: 1;
+}
+
+.data-mes {
+    font-weight: 600;
+}
+
+.data-ano {
+    font-weight: 100;
+}
+
+.botao-adicionar {
+    width: 45px;
+    background: transparent;
+    border: none;
+    color: #cbb2fe;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.botao-adicionar:hover { /* Mudar cor do botao ao passar o mouse */
+    color: #757bc8;
+    transition-duration: 0.5s; /* Setar tempo de transicao */
+}
+
+input {
+    width: 75%;
+    margin: 13px auto;
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-bottom: solid 2px #cbb2fe;
+    outline: none;
+}
+
+::placeholder { /* Mudar a cor do placeholder do input */
+    color: #000;
+}
+
+input:focus { /* Mudar a cor do input ao clicar*/ 
+    border-color: #757bc8;
+    transition-duration: 0.5s;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    background: #fff;
+    border: 3px solid #cbb2fe;
+    border-radius: 5px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+li span {
+    margin-left: auto;
+}
+
+.fa-minus-circle {
+    color: #cbb2fe;
+}
+
+.fa-minus-circle:hover{
+    color: #757bc8;
+    transition-duration: 0.5s;
+}
+
+.citacao {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+cite {
+    color: #fff;
+    font-weight: 500;
+}
+
+.contatos {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+a {
+    margin: 0 20px;
+    color: #000;
+}
+
+a:hover {
+    transform: scale(1.2); /* Aumentar o icone ao passar o mouse */
+    transition-duration: 0.5s;
 }

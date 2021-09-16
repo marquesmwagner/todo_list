@@ -5,30 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/30c49a8c74.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/favicon.png">
-    <title>Lista de Afazeres</title>
+    <title>Lista de Afazeres | By Wagner Marques</title>
 </head>
 <body>
     <div class="container">
         <header>Lista de Afazeres</header>
-        <span>15</span>
-        <div>
-            <span>Setembro</span>
-            <span>2021</span>
+        <div class="cabecalho">
+            <span class="data-dia">15</span>
+            <div class="mes-ano">
+                <span class="data-mes">Setembro</span>
+                <span class="data-ano">2021</span>
+            </div>           
+            <button class="botao-adicionar"><i class="fas fa-plus-circle fa-3x"></i></button>          
         </div>
-        <button></button>
-        <input type="text">
-    </div>
-    
-    <div>
-        <ul></ul>
+        <input type="text" placeholder="Adicione uma tarefa...">
+        <ul>
+            <li>Estudar<span></span><i class="fas fa-minus-circle"></i></li>
+            <li>Jogar um Dotinha<span></span><i class="fas fa-minus-circle"></i></li>
+            <li>Passear com o cachorro<span></span><i class="fas fa-minus-circle"></i></li>
+            <li>Dormir<span></span><i class="fas fa-minus-circle"></i></li>
+            <li>Quebrar o Lucas no SFV<span></span><i class="fas fa-minus-circle"></i></li>
+        </ul>
     </div>
 
-    <cite>Wagner</cite>
+    <div class="citacao">
+        <cite>Lista de Afazeres desenvolvida por Wagner Marques.</cite>
+    </div>
 
-    <div>
-        <span>Git</span>
-        <span>Linkedin</span>
+    <div class="contatos">
+        <a href="https://github.com/marquesmwagner" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+        <a href="https://www.linkedin.com/in/marquesmwagner/" target="_blank"><i class="fab fa-linkedin-in fa-3x"></i></a>
     </div>
 </body>
 </html>

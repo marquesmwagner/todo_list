@@ -31,6 +31,7 @@ header {
     padding: 30px;
     display: flex;
     flex-direction: column;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
 .cabecalho {
@@ -58,6 +59,7 @@ header {
 
 .data-mes {
     font-weight: 600;
+    text-transform: capitalize;
 }
 
 .data-ano {
@@ -117,12 +119,26 @@ li {
     flex-direction: row;
 }
 
-li span {
-    margin-left: auto;
+.lista {
+    text-decoration: line-through;
 }
 
-.fa-minus-circle {
+.botao-riscar {
+    margin-left: auto;
+    background: transparent;
+    border: none;
     color: #cbb2fe;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.botao-excluir {
+    background: transparent;
+    border: none;
+    color: #cbb2fe;
+    font-size: 15px;
+    cursor: pointer;
+    padding-left: 8px;
 }
 
 .fa-minus-circle:hover{

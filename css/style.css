@@ -74,11 +74,12 @@ header {
     font-size: 15px;
     cursor: pointer;
     margin-left: auto;
+    outline: none;
 }
 
 .botao-adicionar:hover { /* Mudar cor do botao ao passar o mouse */
     color: #757bc8;
-    transition-duration: 0.5s; /* Setar tempo de transicao */
+    transition-duration: 0.4s; /* Setar tempo de transicao */
 }
 
 input {
@@ -99,7 +100,7 @@ input {
 
 input:focus { /* Mudar a cor do input ao clicar*/ 
     border-color: #757bc8;
-    transition-duration: 0.5s;
+    transition-duration: 0.4s;
 }
 
 ul {
@@ -117,33 +118,71 @@ li {
     padding: 10px 10px;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
-.lista {
-    text-decoration: line-through;
-}
-
-.botao-riscar {
-    margin-left: auto;
-    background: transparent;
-    border: none;
-    color: #cbb2fe;
+#check {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0 auto 2px 5px;
+    border: 0;
     font-size: 15px;
+    width: 17.5px;
+    height: 17px;
+    background-color: #cbb2fe;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+#check::after{
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 16px;
+    color: white;
+    display: none;
+}
+
+#check:hover {
+    background-color: #757bc8;
+    transition-duration: 0.4s;
+}
+
+#check:checked {
+    background-color: #5bcd3e;
+    transition-duration: 0.4s;
+}
+
+#check:checked + span {
+    text-decoration: line-through;
+    color: #858585;
+    transition-duration: 0.4s;
+}
+
+#check:checked::after {
+    display: block;
 }
 
 .botao-excluir {
     background: transparent;
     border: none;
     color: #cbb2fe;
-    font-size: 15px;
     cursor: pointer;
-    padding-left: 8px;
+    font-size: 15px;
+    width: 17px;
+    height: 17px;
+    margin-left: auto;
 }
 
-.fa-minus-circle:hover{
+.fa-minus-square:hover{
     color: #757bc8;
-    transition-duration: 0.5s;
+    transition-duration: 0.4s;
+}
+
+.fa-minus-square:active{
+    color: #ff0000;
 }
 
 .citacao {
@@ -170,5 +209,5 @@ a {
 
 a:hover {
     transform: scale(1.2); /* Aumentar o icone ao passar o mouse */
-    transition-duration: 0.5s;
+    transition-duration: 0.4s;
 }

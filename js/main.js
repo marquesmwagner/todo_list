@@ -1,4 +1,4 @@
-//Dia - Mês - Ano
+// Atualizar Dia - Mês - Ano
 let agora = new Date();
 let dia = agora.getDate();
 let mes = agora.toLocaleString('default', {month:'long'});

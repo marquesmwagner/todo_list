@@ -121,7 +121,7 @@ li {
     align-items: center;
 }
 
-#check {
+.check {
     appearance: none;
     -webkit-appearance: none;
     margin: 0 auto 2px 5px;
@@ -135,7 +135,7 @@ li {
     justify-content: center;
 }
 
-#check::after{
+.check::after{
     font-family: "Font Awesome 5 Free";
     font-style: normal;
     font-weight: 900;
@@ -145,23 +145,23 @@ li {
     display: none;
 }
 
-#check:hover {
+.check:hover {
     background-color: #757bc8;
     transition-duration: 0.6s;
 }
 
-#check:checked {
+.check:checked {
     background-color: #5bcd3e;
     transition-duration: 0.6s;
 }
 
-#check:checked + span {
+.check:checked + span {
     text-decoration: line-through;
     color: #858585;
     transition-duration: 0.6s;
 }
 
-#check:checked::after {
+.check:checked::after {
     display: block;
 }
 

@@ -25,10 +25,11 @@ function adcTarefa() {
         alert('Você precisa digitar uma tarefa válida.');
     } else {
         document.querySelector('.lista-tarefas').innerHTML += 
-        '<li><input type="checkbox" id="check"><span>' + novaTarefa + 
+        '<li><input type="checkbox" class="check" onclick="checkStatus()"><span>' + novaTarefa + 
         '</span><button class="botao-excluir" onclick="removerTarefa(this)"><i class="fas fa-minus-square fa-lg"></i></button></li>'
         salvarLista();
         focarInsercao();
+        checkCarregar();
     }
 }
 
@@ -36,8 +37,6 @@ function adcTarefa() {
 document.querySelector('.adicionar-tarefa').addEventListener('keyup', function(evento) {
     if (evento.keyCode === 13) {
         adcTarefa();
-        salvarLista();
-        focarInsercao();
     }
 })
 
@@ -46,7 +45,10 @@ function removerTarefa(evento) {
     let remover = confirm('Deseja remover a tarefa?');
     if (remover) {
         evento.parentNode.parentNode.removeChild(evento.parentNode);
+        localStorage.clear();
         salvarLista();
+        checkStatus();
+        focarInsercao();
     }
 }
 
@@ -65,5 +67,27 @@ function carregarLista() {
     }
 }
 
+// Função para verificar as checkboxs
+function checkStatus() {
+    let checkboxStatus = document.querySelectorAll('.check');
+    checkboxStatus.forEach((box, index) => {
+      localStorage.setItem(box.className + [index], JSON.stringify(box.checked));
+    })
+  }
+
+// Carregar as checkboxs
+function checkCarregar() {
+    let checkboxList = document.querySelectorAll('.check');
+    checkboxList.forEach((box, index) => {
+    let checked = JSON.parse(localStorage.getItem(box.className + [index]));
+        if (checked == null) {
+            return;
+        }   else {
+        document.getElementsByClassName(box.className)[index].checked = checked;
+        }
+    })
+}
+
 carregarLista();
+checkCarregar();
 focarInsercao();

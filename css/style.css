@@ -79,7 +79,7 @@ header {
 
 .botao-adicionar:hover { /* Mudar cor do botao ao passar o mouse */
     color: #757bc8;
-    transition-duration: 0.4s; /* Setar tempo de transicao */
+    transition-duration: 0.6s; /* Setar tempo de transicao */
 }
 
 input {
@@ -100,7 +100,7 @@ input {
 
 input:focus { /* Mudar a cor do input ao clicar*/ 
     border-color: #757bc8;
-    transition-duration: 0.4s;
+    transition-duration: 0.6s;
 }
 
 ul {
@@ -147,18 +147,18 @@ li {
 
 #check:hover {
     background-color: #757bc8;
-    transition-duration: 0.4s;
+    transition-duration: 0.6s;
 }
 
 #check:checked {
     background-color: #5bcd3e;
-    transition-duration: 0.4s;
+    transition-duration: 0.6s;
 }
 
 #check:checked + span {
     text-decoration: line-through;
     color: #858585;
-    transition-duration: 0.4s;
+    transition-duration: 0.6s;
 }
 
 #check:checked::after {
@@ -178,7 +178,7 @@ li {
 
 .fa-minus-square:hover{
     color: #757bc8;
-    transition-duration: 0.4s;
+    transition-duration: 0.6s;
 }
 
 .fa-minus-square:active{
@@ -209,5 +209,5 @@ a {
 
 a:hover {
     transform: scale(1.2); /* Aumentar o icone ao passar o mouse */
-    transition-duration: 0.4s;
+    transition-duration: 0.6s;
 }

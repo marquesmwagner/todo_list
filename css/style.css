@@ -177,12 +177,8 @@ li {
 }
 
 .fa-minus-square:hover{
-    color: #757bc8;
+    color: #f00;
     transition-duration: 0.6s;
-}
-
-.fa-minus-square:active{
-    color: #ff0000;
 }
 
 .citacao {

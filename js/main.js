@@ -66,3 +66,4 @@ function carregarLista() {
 }
 
 carregarLista();
+focarInsercao();
